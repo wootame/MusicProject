@@ -1,5 +1,6 @@
 import random
 
+# コードに適したピッチのリスト
 def MelodicNotes():
     MELODIC_NOTES = {
         # C
@@ -68,6 +69,9 @@ def MelodicNotes():
 
     return MELODIC_NOTES
 
+# chord: コード
+# コードを与えて、コードに適したピッチのリストから
+# ランダムにピッチを返す
 def get_random_pitch_for_chord(chord):
     allNotes = MelodicNotes()
 
@@ -76,6 +80,10 @@ def get_random_pitch_for_chord(chord):
     else:
         return None
     
+# chords: ['Am', ... ] コード進行
+# コード進行を与えると、コードの数だけ
+# 合計1秒間になるまで、そのコードの適したピッチを配列に格納する
+# 返り値は配列
 def get_ramdom_melody(chords):
     melody = []
     for item in chords:
